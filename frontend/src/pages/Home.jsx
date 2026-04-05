@@ -133,11 +133,11 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
-              <button className="flex items-center gap-2 bg-[#004D3D] text-white font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-emerald-700 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 shadow-lg shadow-emerald-900/20">
+              <button className="flex items-center gap-2 bg-[#004D3D] text-white font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-emerald-700 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
                 Get Started
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button className="flex items-center gap-2 bg-gray-100 text-gray-800 font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-gray-200 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+              <button className="flex items-center gap-2 bg-[#E7E8E9] text-gray-800 font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-gray-200 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
                 View Products
               </button>
             </div>
