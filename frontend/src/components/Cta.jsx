@@ -12,7 +12,7 @@ export default function FinalCTA() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#003227]/0" />
+        <div className="absolute inset-0"/>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 sm:px-12 md:px-16 py-12 sm:py-16 md:py-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-2xl mb-4">
