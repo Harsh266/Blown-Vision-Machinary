@@ -261,111 +261,113 @@ export default function Home() {
 
       <div className="w-full bg-[#F8F9FA] overflow-hidden">
         {/* ── Hero ── */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-8 py-10 sm:py-14 md:py-16 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-          <div
-            className={`flex-1 w-full max-w-xl transition-all duration-700 ${
-              loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            <div className="inline-flex items-center gap-2 bg-[#CEE8DD] text-[#526961] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6 sm:mb-8">
-              <Cpu className="w-3.5 h-3.5" />
-              Advanced Machinery
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#003429] mb-2 sm:mb-3 leading-tight">
-              Revolutionizing Industrial
-            </h1>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#7EBDA8] mb-4 sm:mb-6 leading-tight">
-              Precision
-            </h1>
-            <p className="text-[#404945] text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md leading-relaxed">
-              Harnessing the power of tectonic-level stability and microscopic
-              accuracy to redefine the boundaries of modern industrial
-              automation and manufacturing.
-            </p>
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
-              <button className="flex items-center gap-2 bg-[#004D3D] text-white font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-emerald-700 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
-                Get Started
-                <ArrowRight className="w-4 h-4" />
-              </button>
-              <button className="flex items-center gap-2 bg-[#E7E8E9] text-gray-800 font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-gray-200 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
-                View Products
-              </button>
-            </div>
-            <div className="flex items-center gap-3 sm:gap-4">
-              <div className="flex -space-x-3">
-                {avatars.map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt=""
-                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
-                  />
-                ))}
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+            <div
+              className={`flex-1 w-full max-w-xl transition-all duration-700 ${
+                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+            >
+              <div className="inline-flex items-center gap-2 bg-[#CEE8DD] text-[#526961] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6 sm:mb-8">
+                <Cpu className="w-3.5 h-3.5" />
+                Advanced Machinery
               </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span className="font-bold text-gray-800 text-sm">
-                    4.9/5 Rating
-                  </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#003429] mb-2 sm:mb-3 leading-tight">
+                Revolutionizing Industrial
+              </h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#7EBDA8] mb-4 sm:mb-6 leading-tight">
+                Precision
+              </h1>
+              <p className="text-[#404945] text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md leading-relaxed">
+                Harnessing the power of tectonic-level stability and microscopic
+                accuracy to redefine the boundaries of modern industrial
+                automation and manufacturing.
+              </p>
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
+                <button className="flex items-center gap-2 bg-[#004D3D] text-white font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-emerald-700 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <button className="flex items-center gap-2 bg-[#E7E8E9] text-gray-800 font-bold text-sm sm:text-base px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-gray-200 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+                  View Products
+                </button>
+              </div>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex -space-x-3">
+                  {avatars.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt=""
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                    />
+                  ))}
                 </div>
-                <p className="text-gray-400 text-xs">
-                  Trusted by 10k+ industry experts
-                </p>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <span className="font-bold text-gray-800 text-sm">
+                      4.9/5 Rating
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-xs">
+                    Trusted by 10k+ industry experts
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div
-            className={`flex-1 w-full max-w-lg relative transition-all duration-700 delay-200 ${
-              loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <div className="relative rounded-3xl overflow-hidden w-full">
-              <img src={hero} alt="" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-emerald-900/10" />
-            </div>
             <div
-              className={`absolute top-6 left-6 sm:left-4 md:left-6 bg-white rounded-2xl shadow-md px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 sm:gap-3 transition-all duration-700 delay-500 ${
-                loaded ? "opacity-80 translate-y-0" : "opacity-0 -translate-y-4"
+              className={`flex-1 w-full max-w-lg relative transition-all duration-700 delay-200 ${
+                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="bg-[#003429] rounded-xl p-2">
-                <Target className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              <div className="relative rounded-3xl overflow-hidden w-full">
+                <img src={hero} alt="" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-emerald-900/10" />
               </div>
-              <div>
-                <p className="text-xs text-[#404945] font-semibold">
-                  Precision
-                </p>
-                <p className="text-sm sm:text-lg font-extrabold text-[#003429]">
-                  100%
-                </p>
+              <div
+                className={`absolute top-6 left-6 sm:left-4 md:left-6 bg-white rounded-2xl shadow-md px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 sm:gap-3 transition-all duration-700 delay-500 ${
+                  loaded ? "opacity-80 translate-y-0" : "opacity-0 -translate-y-4"
+                }`}
+              >
+                <div className="bg-[#003429] rounded-xl p-2">
+                  <Target className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-xs text-[#404945] font-semibold">
+                    Precision
+                  </p>
+                  <p className="text-sm sm:text-lg font-extrabold text-[#003429]">
+                    100%
+                  </p>
+                </div>
               </div>
+              <div
+                className={`absolute bottom-4 right-6 sm:right-4 md:right-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-md px-3 sm:px-5 py-2 sm:py-3 flex items-center gap-2 sm:gap-3 transition-all duration-700 delay-700 ${
+                  loaded ? "opacity-80 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+              >
+                <div className="bg-[#7EBDA8] rounded-xl p-2">
+                  <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-xs text-[#404945] font-semibold">
+                    Production
+                  </p>
+                  <p className="text-sm sm:text-lg font-extrabold text-[#003429]">
+                    +40% Up
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -z-10 -bottom-8 -right-8 w-32 sm:w-48 h-32 sm:h-48 rounded-full border-2 border-dashed border-emerald-200 opacity-60" />
+              <div className="absolute -z-10 -bottom-16 -right-16 w-48 sm:w-64 h-48 sm:h-64 rounded-full border border-emerald-100 opacity-40" />
             </div>
-            <div
-              className={`absolute bottom-4 right-6 sm:right-4 md:right-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-md px-3 sm:px-5 py-2 sm:py-3 flex items-center gap-2 sm:gap-3 transition-all duration-700 delay-700 ${
-                loaded ? "opacity-80 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
-            >
-              <div className="bg-[#7EBDA8] rounded-xl p-2">
-                <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-              </div>
-              <div>
-                <p className="text-xs text-[#404945] font-semibold">
-                  Production
-                </p>
-                <p className="text-sm sm:text-lg font-extrabold text-[#003429]">
-                  +40% Up
-                </p>
-              </div>
-            </div>
-            <div className="absolute -z-10 -bottom-8 -right-8 w-32 sm:w-48 h-32 sm:h-48 rounded-full border-2 border-dashed border-emerald-200 opacity-60" />
-            <div className="absolute -z-10 -bottom-16 -right-16 w-48 sm:w-64 h-48 sm:h-64 rounded-full border border-emerald-100 opacity-40" />
           </div>
         </section>
 
         {/* ── Machine Quick Info ── */}
-        <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-10 lg:px-8">
+        <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
               ref={machineHeadingRef}
@@ -443,7 +445,7 @@ export default function Home() {
         </section>
 
         {/* ── Features ── */}
-        <section className="py-10 sm:py-12 md:py-14 px-4 sm:px-6 md:px-10 lg:px-8">
+        <section className="py-10 sm:py-12 md:py-14 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
               ref={featHeadingRef}
@@ -496,7 +498,7 @@ export default function Home() {
         </section>
 
         {/* ── Engineered Solutions Split Section ── */}
-        <section className="relative w-full py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-8">
+        <section className="relative w-full py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
               ref={solutionRef}
@@ -599,7 +601,7 @@ export default function Home() {
         </section>
 
         {/* ── Stats ── */}
-        <section className="w-full bg-[#ffffff] py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-8">
+        <section className="w-full bg-[#ffffff] py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div
             ref={statsRef}
             className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 text-center"
@@ -618,7 +620,7 @@ export default function Home() {
         </section>
 
         {/* ── Testimonials ── */}
-        <section className="w-full py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-8">
+        <section className="w-full py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
               ref={testiBadgeRef}
