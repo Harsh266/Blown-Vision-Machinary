@@ -63,7 +63,7 @@ export default function KonarkNavbar() {
             NEW
           </span>
           <span className="text-white/90 text-center leading-snug">
-            Konark Update 2026: Discover new CRM innovations and strategies to elevate your business.
+            Blown Vision Machinary Update 2026: Discover new CRM innovations and strategies to elevate your business.
           </span>
           <button
             onClick={() => setBannerVisible(false)}
