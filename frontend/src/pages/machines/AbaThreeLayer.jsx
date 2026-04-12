@@ -1,5 +1,5 @@
 import { CheckCircle, Clock, Ruler, Bot, ShoppingBag, ShoppingCart, Trash2, Layers, AlignLeft, Sprout, Flame, Wind, RefreshCw, Compass, SlidersHorizontal, Cpu, RotateCw, History, Zap, Sigma, Eye, PlusCircle, Package, Shirt, Recycle, UtensilsCrossed, Box, Snowflake, Scissors } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Cta from "../../components/Cta";
 import Footer from "../../components/Footer";
@@ -50,7 +50,7 @@ function useScrollReveal() {
   }, []);
 }
 
-export default function AbcThreeLayer() {
+export default function AbaThreeLayer() {
   useScrollReveal();
 
   return (
