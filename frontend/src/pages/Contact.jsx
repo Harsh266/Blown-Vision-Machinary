@@ -20,7 +20,7 @@ const items = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["support@konarkplast.com", "sales@konarkplast.com"],
+                    lines: ["support@blownvision.com", "sales@blownvision.com"],
   },
   {
     icon: Clock,
@@ -75,7 +75,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Inquiry submitted!");
+    alert("Thank you for your inquiry! Our team will get back to you shortly.");
   };
 
   return (
@@ -245,7 +245,7 @@ export default function Contact() {
               <div className="flex flex-col justify-center px-6 sm:px-8 py-8 sm:py-10 space-y-4">
                 <h2 className="text-[#003429] text-xl sm:text-2xl font-bold leading-snug">Our Headquarters</h2>
                 <div className="space-y-1">
-                  <p className="text-[#404945] text-sm font-semibold">Konark Plastomech Pvt. Ltd.</p>
+                  <p className="text-[#404945] text-sm font-semibold">Blown Vision Machinary</p>
                   <p className="text-[#4A5450] text-sm leading-relaxed">
                     Plot No. 42, Industrial Area Phase II,<br />
                     Andheri East, Mumbai 400093,<br />

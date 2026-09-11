@@ -31,36 +31,36 @@ const machines = [
       "https://cpimg.tistatic.com/08592631/b/4/Monolayer-Blown-Film-Extrusion-Line.jpg",
     title: (
       <>
-        Monolayer Blown Film Extrusion <br /> Line
+        Alpha Series Blown Film <br /> Extrusion Plant
       </>
     ),
     path: "/machines/monolayer",
     specs: [
-      { label: "Output", value: "25 - 500 Kg/hr" },
+      { label: "Output", value: "30 - 60 Kg/hr" },
       { label: "Material", value: "HDPE/HM" },
-      { label: "Layflat Width", value: "100 - 3000 mm" },
+      { label: "Layflat Width", value: "150 - 850 mm" },
     ],
   },
   {
     image:
       "https://www.polystarco.com/upload/catalog_m/Three%20Layer%20ABA%20Blown%20Film%20Machine__23L05BPZh4.png",
-    title: "ABA Three Layer Blown Film Extrusion Line",
+    title: "Beta Series Blown Film Extrusion Plant",
     path: "/machines/aba",
     specs: [
-      { label: "Output", value: "40 - 150 Kg/hr" },
-      { label: "Material", value: "HDPE/LDPE" },
-      { label: "Layflat Width", value: "150 - 1500 mm" },
+      { label: "Output", value: "55 - 80 Kg/hr" },
+      { label: "Material", value: "LDPE/LLDPE" },
+      { label: "Layflat Width", value: "300 - 850 mm" },
     ],
   },
   {
     image:
       "https://www.plastar-machine.com/UserFiles/pd/abc-three-layer-co-extrusion_spic.jpg",
-    title: "ABC Three Layer Blown Film Extrusion Line",
+    title: "Gamma Series Blown Film Extrusion Plant",
     path: "/machines/abc",
     specs: [
-      { label: "Output", value: "90 - 300 Kg/hr" },
-      { label: "Material", value: "LLDPE/LDPE" },
-      { label: "Layflat Width", value: "600 - 2000 mm" },
+      { label: "Output", value: "85 - 200 Kg/hr" },
+      { label: "Material", value: "HM-HDPE/LDPE" },
+      { label: "Layflat Width", value: "550 - 1600 mm" },
     ],
   },
 ];
@@ -109,7 +109,7 @@ const solutionFeatures = [
 ];
 
 const stats = [
-  { value: 15, suffix: "+", label: "YEARS EXPERIENCE" },
+  { value: 27, suffix: "+", label: "YEARS EXPERIENCE" },
   { value: 500, suffix: "+", label: "PROJECTS COMPLETED" },
   { value: 98, suffix: "%", label: "CLIENT SATISFACTION" },
 ];
@@ -540,7 +540,7 @@ export default function Home() {
                     }}
                   >
                     <p className="text-sm sm:text-[15px] font-bold text-[#003429] leading-snug mb-2">
-                      "Konark redefined our precision standards within weeks."
+                      "Blown Vision Machinary redefined our precision standards within weeks."
                     </p>
                     <p className="text-xs text-gray-400 font-semibold">
                       — CTO, Industrial Dynamics
@@ -568,7 +568,7 @@ export default function Home() {
 
                 {/* Body */}
                 <p className="text-[#404945] font-medium text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
-                  At Konark, we bridge the gap between architectural theory and
+                  At Blown Vision Machinary, we bridge the gap between architectural theory and
                   industrial reality. Our systems are built not just to perform,
                   but to evolve with your business needs.
                 </p>
@@ -646,7 +646,7 @@ export default function Home() {
                 What Our Clients Are Saying
               </h2>
               <p className="text-[#5F5F5F] text-sm sm:text-base max-w-xl leading-relaxed">
-                From regional manufacturers to global enterprises, Navrang is
+                From regional manufacturers to global enterprises, Blown Vision Machinary is
                 helping industrial teams automate smarter every day.
               </p>
             </div>

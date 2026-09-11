@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Requirements Report — Blown Vision Machinary</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: #f5f7f6; color: #1a1a1a; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { font-size: 2rem; color: #003429; margin-bottom: 0.25rem; }
+    .subtitle { color: #5f6b66; font-size: 0.95rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.3rem; color: #003429; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #003429; }
+    h3 { font-size: 1rem; color: #004D3D; margin: 1rem 0 0.5rem; }
+    .card { background: #fff; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .card-title { font-weight: 700; color: #003429; font-size: 1rem; }
+    .badge { font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .badge-static { background: #e8f0ec; color: #004D3D; }
+    .badge-dynamic { background: #fef3c7; color: #92400e; }
+    .badge-api { background: #dbeafe; color: #1e40af; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { text-align: left; font-weight: 600; color: #003429; border-bottom: 2px solid #c8d4cc; padding: 0.5rem 0.75rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5eae7; vertical-align: top; }
+    tr:last-child td { border: none; }
+    .tag { display: inline-block; font-size: 0.72rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 500; margin: 0.1rem; }
+    .tag-text { background: #e8f0ec; color: #003429; }
+    .tag-image { background: #f0e6ff; color: #5b21b6; }
+    .tag-array { background: #fef9c3; color: #854d0e; }
+    .tag-icon { background: #dbeafe; color: #1e40af; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+    .summary-item { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .summary-item .count { font-size: 1.5rem; font-weight: 800; color: #003429; }
+    .summary-item .label { font-size: 0.78rem; color: #5f6b66; margin-top: 0.15rem; }
+    .source { font-size: 0.78rem; color: #888; margin-top: 0.25rem; font-family: monospace; }
+    .section-tag { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; margin-left: 0.5rem; vertical-align: middle; }
+    .fade { color: #888; font-size: 0.85rem; }
+    .col-key { width: 28%; }
+    .col-type { width: 14%; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Data Requirements Report</h1>
+  <p class="subtitle">Blown Vision Machinary — Complete inventory of every piece of data used across all pages</p>
+
+  <!-- ═══════════════════════════ SUMMARY ═══════════════════════════ -->
+  <h2>Summary</h2>
+  <div class="summary-grid">
+    <div class="summary-item"><div class="count">9</div><div class="label">Total Pages / Views</div></div>
+    <div class="summary-item"><div class="count">4</div><div class="label">Shared Components</div></div>
+    <div class="summary-item"><div class="count">30+</div><div class="label">Sections</div></div>
+    <div class="summary-item"><div class="count">3</div><div class="label">Machine Types</div></div>
+    <div class="summary-item"><div class="count">0</div><div class="label">API / CMS Calls</div></div>
+    <div class="summary-item"><div class="count">100%</div><div class="label">Hardcoded Demo Data</div></div>
+  </div>
+
+  <!-- ═══════════════════════════ GLOBAL ═══════════════════════════ -->
+  <h2>Global / Shared Components</h2>
+
+  <!-- Navbar -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Navbar <span class="section-tag" style="background:#e8f0ec;color:#004D3D;">global</span></span>
+      <span class="badge badge-static">static demo</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Logo image</td><td><span class="tag tag-image">image</span></td><td><code>public/logo.png</code></td></tr>
+      <tr><td>Brand name</td><td><span class="tag tag-text">text</span></td><td>"Blown Vision Machinary"</td></tr>
+      <tr><td>Nav links</td><td><span class="tag tag-array">array</span></td><td>Home, About us, Machines (3 children), Contact us</td></tr>
+      <tr><td>Banner text</td><td><span class="tag tag-text">text</span></td><td>"Blown Vision Machinary Update 2026: Discover new CRM innovations..."</td></tr>
+      <tr><td>Machine dropdown</td><td><span class="tag tag-array">array</span></td><td>Monolayer, ABA, ABC — each with label + href</td></tr>
+    </table>
+    <div class="source">Source: <code>src/components/Navbar.jsx</code></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Footer <span class="section-tag" style="background:#e8f0ec;color:#004D3D;">global</span></span>
+      <span class="badge badge-static">static demo</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Brand name</td><td><span class="tag tag-text">text</span></td><td>"Blown Vision Machinary"</td></tr>
+      <tr><td>Tagline</td><td><span class="tag tag-text">text</span></td><td>"Defining the future of precision industrial systems..."</td></tr>
+      <tr><td>Social icons</td><td><span class="tag tag-array">array</span></td><td>Share2, Globe, Mail — all with placeholder <code>href="#"</code></td></tr>
+      <tr><td>Quick Links</td><td><span class="tag tag-array">array</span></td><td>Solutions, Machine Specifications, Industry Standards, Global Network</td></tr>
+      <tr><td>Company Links</td><td><span class="tag tag-array">array</span></td><td>About Us, Careers, Sustainability, Privacy Policy</td></tr>
+      <tr><td>Contact Support</td><td><span class="tag tag-array">array</span></td><td>Phone <code>+1 (800) KONARK-PS</code>, Address <code>12 Precision Way...</code>, Hours <code>24/7</code></td></tr>
+      <tr><td>Copyright</td><td><span class="tag tag-text">text</span></td><td>"© 2026 Blown Vision Machinary. Precision Tectonics."</td></tr>
+      <tr><td>Bottom links</td><td><span class="tag tag-array">array</span></td><td>Privacy Policy, Terms of Service</td></tr>
+    </table>
+    <div class="source">Source: <code>src/components/Footer.jsx</code></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">CTA Section <span class="section-tag" style="background:#e8f0ec;color:#004D3D;">global</span></span>
+      <span class="badge badge-static">static demo</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Background texture</td><td><span class="tag tag-image">image</span></td><td><code>public/texture.png</code></td></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Ready to Optimize Your Packaging Production?"</td></tr>
+      <tr><td>Subtext</td><td><span class="tag tag-text">text</span></td><td>"Join hundreds of leading manufacturers globally..."</td></tr>
+      <tr><td>Button</td><td><span class="tag tag-text">text</span> + <span class="tag tag-text">link</span></td><td>"Contact us" → <code>/contact</code></td></tr>
+    </table>
+    <div class="source">Source: <code>src/components/Cta.jsx</code></div>
+  </div>
+
+  <!-- ═══════════════════════════ HOME ═══════════════════════════ -->
+  <h2>Home Page <span style="font-weight:400;font-size:0.85rem;color:#5f6b66;">/</span></h2>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Hero Section</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Badge text</td><td><span class="tag tag-text">text</span></td><td>"Advanced Machinery"</td></tr>
+      <tr><td>Heading line 1</td><td><span class="tag tag-text">text</span></td><td>"Revolutionizing Industrial"</td></tr>
+      <tr><td>Heading line 2</td><td><span class="tag tag-text">text</span></td><td>"Precision"</td></tr>
+      <tr><td>Description</td><td><span class="tag tag-text">text</span></td><td>"Harnessing the power of tectonic-level stability..."</td></tr>
+      <tr><td>CTA buttons</td><td><span class="tag tag-array">array</span></td><td>"Get Started", "View Products"</td></tr>
+      <tr><td>Avatars</td><td><span class="tag tag-array">array</span> of <span class="tag tag-image">image URL</span></td><td>3 randomuser.me portrait URLs</td></tr>
+      <tr><td>Rating</td><td><span class="tag tag-text">text</span></td><td>"4.9/5 Rating"</td></tr>
+      <tr><td>Trust text</td><td><span class="tag tag-text">text</span></td><td>"Trusted by 10k+ industry experts"</td></tr>
+      <tr><td>Hero image</td><td><span class="tag tag-image">image</span></td><td><code>public/hero.png</code></td></tr>
+      <tr><td>Floating cards</td><td><span class="tag tag-array">array</span></td><td>Precision 100%, Production +40% Up</td></tr>
+    </table>
+    <div class="source">Source: <code>src/pages/Home.jsx</code> lines 268-375</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Machine Quick Info</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Section heading</td><td><span class="tag tag-text">text</span></td><td>"Machine Quick Info"</td></tr>
+      <tr><td>Subheading</td><td><span class="tag tag-text">text</span></td><td>"Precision engineered components for specialized applications."</td></tr>
+      <tr><td rowspan="4">Per machine (×3)</td><td><span class="tag tag-image">image URL</span></td><td>External CDN image</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>Machine name (Monolayer / ABA / ABC)</td></tr>
+      <tr><td><span class="tag tag-text">path</span></td><td>Route link</td></tr>
+      <tr><td><span class="tag tag-array">specs[]</span></td><td>Output, Material, Layflat Width (label + value)</td></tr>
+    </table>
+    <div class="source">Source: <code>Home.jsx</code> lines 28-66 (data), 378-453 (render)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Features / Capabilities</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Section heading</td><td><span class="tag tag-text">text</span></td><td>"Next-Gen Industrial Capabilities"</td></tr>
+      <tr><td rowspan="3">Per feature (×4)</td><td><span class="tag tag-icon">icon</span></td><td>Lucide icon (Brain, Settings2, Network, Cloud)</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>AI Insights, Workflow Automation, Omni-Channel Support, Secure Cloud</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>Short paragraph each</td></tr>
+    </table>
+    <div class="source">Source: <code>Home.jsx</code> lines 68-93</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Engineered Solutions</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Image</td><td><span class="tag tag-image">image</span></td><td><code>public/solution.png</code></td></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Engineered Solutions for Modern Challenges"</td></tr>
+      <tr><td>Description</td><td><span class="tag tag-text">text</span></td><td>"At Konark, we bridge the gap..."</td></tr>
+      <tr><td rowspan="2">Features (×3)</td><td><span class="tag tag-text">title</span></td><td>Precision Manufacturing, Sustainable Operations, Custom Modular Design</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>Short desc each</td></tr>
+      <tr><td>Quote card</td><td><span class="tag tag-text">text</span></td><td>"Konark redefined our precision standards within weeks." — CTO, Industrial Dynamics</td></tr>
+    </table>
+    <div class="source">Source: <code>Home.jsx</code> lines 95-109 (data), 509-609 (render)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Stats</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td rowspan="3">Per stat (×3)</td><td><span class="tag tag-text">value</span> + <span class="tag tag-text">suffix</span></td><td>15+, 500+, 98%</td></tr>
+      <tr><td><span class="tag tag-text">label</span></td><td>YEARS EXPERIENCE, PROJECTS COMPLETED, CLIENT SATISFACTION</td></tr>
+    </table>
+    <div class="source">Source: <code>Home.jsx</code> lines 111-115</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Testimonials</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Section label</td><td><span class="tag tag-text">text</span></td><td>"Testimonials" badge</td></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"What Our Clients Are Saying"</td></tr>
+      <tr><td>Subtext</td><td><span class="tag tag-text">text</span></td><td>"From regional manufacturers to global enterprises..."</td></tr>
+      <tr><td rowspan="5">Per testimonial (×6)</td><td><span class="tag tag-text">name</span></td><td>Sarah Timothy, James Richardson, Emily Kwik, etc.</td></tr>
+      <tr><td><span class="tag tag-text">role</span></td><td>"Operations Manager, FlexiPack", etc.</td></tr>
+      <tr><td><span class="tag tag-image">avatar URL</span></td><td>randomuser.me portraits</td></tr>
+      <tr><td><span class="tag tag-text">quote</span></td><td>Testimonial text</td></tr>
+      <tr><td><span class="tag tag-text">logoShape</span></td><td>square, diamond, rect, pill, circle, parallelogram</td></tr>
+    </table>
+    <div class="source">Source: <code>Home.jsx</code> lines 117-166</div>
+  </div>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <h2>About Page <span style="font-weight:400;font-size:0.85rem;color:#5f6b66;">/about</span></h2>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">About Hero</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Badge</td><td><span class="tag tag-text">text</span></td><td>"EST. 1997"</td></tr>
+      <tr><td>Heading (3 lines)</td><td><span class="tag tag-text">text</span></td><td>"Precision", "Tectonics", "Engineered."</td></tr>
+      <tr><td>Description</td><td><span class="tag tag-text">text</span></td><td>"With over 27 years of pioneering excellence..."</td></tr>
+      <tr><td>Stats (×3)</td><td><span class="tag tag-text">value+label</span></td><td>27+ YEARS EXPERIENCE, 20+ GLOBAL MARKETS, 500+ INSTALLATIONS</td></tr>
+      <tr><td>Hero image</td><td><span class="tag tag-image">image</span></td><td><code>public/heroo.png</code></td></tr>
+      <tr><td>Quote card</td><td><span class="tag tag-text">text</span></td><td>"Innovation isn't just about speed..."</td></tr>
+    </table>
+    <div class="source">Source: <code>src/pages/About.jsx</code> lines 90-133</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Vision &amp; Mission</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Vision text</td><td><span class="tag tag-text">text</span></td><td>"To be the global benchmark for high-performance plastic extrusion solutions."</td></tr>
+      <tr><td>Mission text</td><td><span class="tag tag-text">text</span></td><td>"To redefine industrial efficiency through uncompromising technical precision."</td></tr>
+      <tr><td>Icons</td><td><span class="tag tag-icon">icon</span></td><td>Eye, Target (Lucide)</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 135-161</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Engineering Process</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"The Engineering Process"</td></tr>
+      <tr><td rowspan="3">Per step (×4)</td><td><span class="tag tag-icon">icon</span></td><td>Compass, Cog, Activity, Globe</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>Conceptual Design → Precision Fabrication → Rigorous Testing → Global Deployment</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>Short paragraph each</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 59-64, 164-216</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Facilities &amp; Quality Blocks</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Facilities image</td><td><span class="tag tag-image">image</span></td><td><code>public/about2.png</code></td></tr>
+      <tr><td>Facilities heading</td><td><span class="tag tag-text">text</span></td><td>"Advanced Manufacturing Facilities"</td></tr>
+      <tr><td>Facilities checklist</td><td><span class="tag tag-array">array</span></td><td>3 items: ISO 9001:2015, Climate-controlled rooms, R&D lab</td></tr>
+      <tr><td>QA image</td><td><span class="tag tag-image">image</span></td><td><code>public/about1.png</code></td></tr>
+      <tr><td>QA heading</td><td><span class="tag tag-text">text</span></td><td>"Quality Assurance &amp; Team"</td></tr>
+      <tr><td>QA cards</td><td><span class="tag tag-array">array</span></td><td>2 cards: "150+ Technical Staff", "Zero-Tolerance QA" — each with title + desc</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 218-267</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Why Choose Us</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Why Choose Us"</td></tr>
+      <tr><td>Subtext</td><td><span class="tag tag-text">text</span></td><td>"Building more than machines..."</td></tr>
+      <tr><td rowspan="2">Per card (×3)</td><td><span class="tag tag-text">title</span></td><td>Unmatched Reliability, Innovation First, True Partnership</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>Short paragraph each</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 66-70, 269-288</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Timeline / Milestones</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Evolutionary Milestones"</td></tr>
+      <tr><td rowspan="4">Per milestone (×4)</td><td><span class="tag tag-text">year</span></td><td>1997, 2005, 2012, 2024</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>Company Founded, First Export Shipment, R&D Center Expansion, Next-Gen Green Extruders</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>Short paragraph each</td></tr>
+      <tr><td><span class="tag tag-text">side</span> + <span class="tag tag-text">muted</span></td><td>left/right alignment + muted flag for color</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 72-77, 290-358</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Board of Directors</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Board of Directors"</td></tr>
+      <tr><td>Subtext</td><td><span class="tag tag-text">text</span></td><td>"The minds steering the future of plastic extrusion."</td></tr>
+      <tr><td rowspan="4">Per member (×3)</td><td><span class="tag tag-text">name</span></td><td>Rajesh Patel, Amit Sharma, Priya Mehta</td></tr>
+      <tr><td><span class="tag tag-text">role</span></td><td>CEO, CTO, COO</td></tr>
+      <tr><td><span class="tag tag-text">bio</span></td><td>One-liner description</td></tr>
+      <tr><td><span class="tag tag-image">image URL</span></td><td>Unsplash corporate portraits</td></tr>
+    </table>
+    <div class="source">Source: <code>About.jsx</code> lines 79-83, 360-384</div>
+  </div>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <h2>Contact Page <span style="font-weight:400;font-size:0.85rem;color:#5f6b66;">/contact</span></h2>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Contact Hero &amp; Form</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Background image</td><td><span class="tag tag-image">image</span></td><td><code>public/contact.png</code></td></tr>
+      <tr><td>Label</td><td><span class="tag tag-text">text</span></td><td>"Get In Touch"</td></tr>
+      <tr><td>Heading</td><td><span class="tag tag-text">text</span></td><td>"Let's Connect"</td></tr>
+      <tr><td>Subtext</td><td><span class="tag tag-text">text</span></td><td>"A trusted manufacturer of advanced plastic extrusion machinery..."</td></tr>
+      <tr><td>Form fields</td><td><span class="tag tag-array">array</span></td><td>fullName (text), email (email), inquiryType (select with 4 options), message (textarea)</td></tr>
+      <tr><td>Button label</td><td><span class="tag tag-text">text</span></td><td>"Submit Inquiry" (no backend — alert only)</td></tr>
+    </table>
+    <div class="source">Source: <code>src/pages/Contact.jsx</code> lines 86-198</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Map &amp; Contact Details</span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td>Google Maps iframe</td><td><span class="tag tag-text">URL</span></td><td><code>q=19.1136,72.8697&amp;z=14</code> (Mumbai coordinates)</td></tr>
+      <tr><td>Company name</td><td><span class="tag tag-text">text</span></td><td>"Konark Plastomech Pvt. Ltd."</td></tr>
+      <tr><td>Address</td><td><span class="tag tag-text">text</span></td><td>Plot No. 42, Industrial Area Phase II, Andheri East, Mumbai 400093</td></tr>
+      <tr><td>Geo coords</td><td><span class="tag tag-text">text</span></td><td>"19.1136° N, 72.8697° E"</td></tr>
+      <tr><td>Status</td><td><span class="tag tag-text">text</span></td><td>"Operational" with green dot indicator</td></tr>
+      <tr><td>Map link</td><td><span class="tag tag-text">link</span></td><td>"Open in Google Maps" → <code>https://maps.google.com</code></td></tr>
+      <tr><td rowspan="3">Contact cards (×4)</td><td><span class="tag tag-icon">icon</span></td><td>MapPin, Phone, Mail, Clock</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>Mumbai HQ, Phone, Email, Business Hours</td></tr>
+      <tr><td><span class="tag tag-text">lines[]</span></td><td>2 lines per card (e.g. "General: +91 22 2345 6789", "Sales: +91 22 2345 6790")</td></tr>
+    </table>
+    <div class="source">Source: <code>Contact.jsx</code> lines 9-30 (data), 201-299 (render)</div>
+  </div>
+
+  <!-- ═══════════════════════════ MACHINE PAGES ═══════════════════════════ -->
+  <h2>Machine Detail Pages</h2>
+  <p class="fade" style="margin-bottom:0.75rem;">All three machine pages share the <strong>same section structure</strong>. Below is the common template; section-specific data differs per machine.</p>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Hero Section <span style="font-weight:400;color:#5f6b66;">(all machines)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th>Machine</th><th>Image URL</th><th>Max Output</th><th>Max Width</th><th>Materials</th></tr>
+      <tr><td>Monolayer</td><td><code>cpimg.tistatic.com/...</code></td><td>500 Kg/hr</td><td>3000 mm</td><td>HM-HDPE, LDPE, LLDPE, Bio</td></tr>
+      <tr><td>ABA</td><td><code>polystarco.com/...</code></td><td>300 Kg/hr</td><td>2000 mm</td><td>LDPE, LLDPE, HDPE, Bio</td></tr>
+      <tr><td>ABC</td><td><code>plastar-machine.com/...</code></td><td>150 Kg/hr</td><td>1800 mm</td><td>HM-HDPE, LDPE, LLDPE, Bio</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Extrusion Process <span style="font-weight:400;color:#5f6b66;">(identical across all 3 machines)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th class="col-key">Data</th><th class="col-type">Type</th><th>Details</th></tr>
+      <tr><td rowspan="3">Per step (×4)</td><td><span class="tag tag-icon">icon</span></td><td>Bot, Flame, Wind, RefreshCw</td></tr>
+      <tr><td><span class="tag tag-text">title</span></td><td>Feeding → Melting → Blowing → Winding</td></tr>
+      <tr><td><span class="tag tag-text">description</span></td><td>One-liner each</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Engineering Excellence <span style="font-weight:400;color:#5f6b66;">(per machine)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th>Machine</th><th>Card 1 (Core Design)</th><th>Card 2 (Drive &amp; Transmission)</th><th>Card 3 (Control)</th></tr>
+      <tr><td>Monolayer</td><td>Barrier screw, grooved barrel, spiral die, nitrided assembly</td><td>Helical gearbox, VFD, sync speed control, IE3 motors</td><td>PLC + HMI, PID controllers, bubble basket, ultrasonic sensors</td></tr>
+      <tr><td>ABA</td><td>Multi-material design, grooved barrel, barrier screws, Co-Ex die</td><td>Helical gearbox, air ring blower, dual lip air ring, AC sync</td><td>Bubble basket, oscillating haul-off, web aligner, SSR heaters</td></tr>
+      <tr><td>ABC</td><td>Grooved barrel, nitrided screw-barrel, Co-Ex ABA die, compact</td><td>Helical gearbox, air ring blower, AC sync, air cooling ring</td><td>Bubble basket, web aligner, surface rewinder, SSR heaters</td></tr>
+    </table>
+    <div class="source">Monolayer: lines 232-318 | ABA: lines 231-317 | ABC: lines 231-317</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Optional Attachments <span style="font-weight:400;color:#5f6b66;">(per machine)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th>Machine</th><th>Attachments (6 each)</th></tr>
+      <tr><td>Monolayer</td><td>Rotating Die, Screen Changer, Auto Winder, Corona Treater, Gravimetric Dosing, Gauge Control</td></tr>
+      <tr><td>ABA</td><td>Bimetallic Screw &amp; Barrel, Auto Winder, Trimming Arrangement, Corona Treater, Air Chiller, Gravimetric Dosing</td></tr>
+      <tr><td>ABC</td><td>LDPE/LLDPE Attachment, Filter Changer, Semi/Auto Winder, Corona Treater, Air Winding Shaft, Hopper Loader</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Industrial Applications <span style="font-weight:400;color:#5f6b66;">(per machine)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th>Machine</th><th>Applications (6 each)</th></tr>
+      <tr><td>Monolayer</td><td>Shopping Bags, Grocery Bags, Trash Bags, Shrink Film, Lamination Film, Mulch Film</td></tr>
+      <tr><td>ABA</td><td>Lamination Film, Barrier Film, Stretch Film, Shrink Film, Mulch Film, Special Purpose 3-Layer</td></tr>
+      <tr><td>ABC</td><td>Shopping &amp; Carry Bags, Grocery &amp; T-Shirt Bags, Garbage Bags, Detergent &amp; Garment, Food Products, Industrial Film</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Technical Specifications Table <span style="font-weight:400;color:#5f6b66;">(per machine)</span></span>
+      <span class="badge badge-static">hardcoded</span>
+    </div>
+    <table>
+      <tr><th>Machine</th><th>Models</th><th>Columns</th></tr>
+      <tr><td>Monolayer</td><td>4 rows: KBFH/35-G, KBFH/45-G, KBFL/55-G, KBFL/75-G</td><td>Plant Model, Screw Size, Layflat Width, Max Production, Connected Load, Dimension</td></tr>
+      <tr><td>ABA</td><td>4 rows: KML/40×47×40-G, KML/47×51×47-G, KML/55×65×55-G (×2 variants)</td><td>Same 6 columns</td></tr>
+      <tr><td>ABC</td><td>3 rows: KWLA/35×40×G, KWLA/40×47×G, KWLA/47×65×G</td><td>Same 6 columns</td></tr>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════ NOTES ═══════════════════════════ -->
+  <h2>Key Observations</h2>
+  <div class="card" style="background:#fafcfa;">
+    <ul style="padding-left:1.25rem;line-height:1.8;font-size:0.9rem;color:#333;">
+      <li><strong>100% of data is hardcoded</strong> — no CMS, API, database, or backend calls anywhere in the app.</li>
+      <li><strong>Images</strong> are either local <code>public/*.png</code> (logo, hero, heroo, solution, about1, about2, contact, texture) or external CDN URLs (machine photos, avatars, board member portraits).</li>
+      <li><strong>Icons</strong> come from the <code>lucide-react</code> library — every section uses different icon components.</li>
+      <li><strong>Contact form</strong> has no backend — submit shows a browser <code>alert()</code> only.</li>
+      <li><strong>Footer social links</strong> are all <code>href="#"</code> placeholders.</li>
+      <li><strong>Some routes referenced in Footer</strong> (<code>/solutions</code>, <code>/industry-standards</code>, <code>/global-network</code>, <code>/careers</code>, <code>/sustainability</code>, <code>/privacy-policy</code>, <code>/terms</code>) do not have actual pages defined in the router.</li>
+      <li><strong>Machine detail pages</strong> share identical structure but each has unique content for Engineering Excellence, Attachments, Applications, and Specs tables.</li>
+      <li><strong>Rating / trust data</strong> ("4.9/5", "Trusted by 10k+") is purely illustrative demo data.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

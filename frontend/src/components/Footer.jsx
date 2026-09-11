@@ -1,31 +1,31 @@
 import { Link } from "react-router-dom";
-import { Share2, Globe, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Share2, Globe, Mail, Phone, MapPin, Clock, Video, Camera, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const quickLinks = [
-  { label: "Solutions", href: "/solutions" },
-  { label: "Machine Specifications", href: "/machines" },
-  { label: "Industry Standards", href: "/industry-standards" },
-  { label: "Global Network", href: "/global-network" },
+  { label: "Machines", href: "/machines" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Sustainability", href: "/sustainability" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Machines", href: "/machines" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const contactItems = [
-  { icon: Phone, text: "+1 (800) KONARK-PS" },
-  { icon: MapPin, text: "12 Precision Way, Tech Industrial Park" },
-  { icon: Clock, text: "24/7 Global Engineering Support" },
+  { icon: Phone, text: "+91 22 2345 6789" },
+  { icon: MapPin, text: "Andheri East, Mumbai 400093" },
+  { icon: Clock, text: "Mon - Sat: 9:00 AM - 6:00 PM" },
 ];
 
 const socialIcons = [
-  { icon: Share2, href: "#", label: "Share" },
-  { icon: Globe, href: "#", label: "Website" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: Globe, href: "https://blownvision.com", label: "Website" },
+  { icon: Mail, href: "mailto:support@blownvision.com", label: "Email" },
+  { icon: Video, href: "https://youtube.com/@blownvision", label: "YouTube" },
+  { icon: Camera, href: "https://instagram.com/blownvision", label: "Instagram" },
+  { icon: MessageCircle, href: "https://wa.me/912223456789", label: "WhatsApp" },
 ];
 
 /* Animation Variants */
@@ -149,11 +149,11 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-5">
-            <Link to="/privacy-policy" className="text-xs text-[#555] hover:text-[#0f4c35] transition">
-              Privacy Policy
+            <Link to="/about" className="text-xs text-[#555] hover:text-[#0f4c35] transition">
+              About Us
             </Link>
-            <Link to="/terms" className="text-xs text-[#555] hover:text-[#0f4c35] transition">
-              Terms of Service
+            <Link to="/contact" className="text-xs text-[#555] hover:text-[#0f4c35] transition">
+              Contact
             </Link>
           </div>
         </div>

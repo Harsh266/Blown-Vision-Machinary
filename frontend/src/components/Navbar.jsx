@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../public/logo.png";
 
 const machineLinks = [
-  { label: "Monolayer Blown Film Extrusion Line",     href: "/machines/monolayer"     },
-  { label: "ABA Three Layer Blown Film Extrusion Line",   href: "/machines/aba"   },
-  { label: "ABC Three Layer Blown Film Extrusion Line", href: "/machines/abc" },
+  { label: "Alpha Series Blown Film Extrusion Plant",     href: "/machines/monolayer"     },
+  { label: "Beta Series Blown Film Extrusion Plant",   href: "/machines/aba"   },
+  { label: "Gamma Series Blown Film Extrusion Plant", href: "/machines/abc" },
 ];
 
 const navLinks = [
@@ -15,7 +15,7 @@ const navLinks = [
   { label: "Contact us", href: "/contact" },
 ];
 
-export default function KonarkNavbar() {
+export default function Navbar() {
   const location = useLocation();
   const [bannerVisible,      setBannerVisible]      = useState(true);
   const [machinesOpen,       setMachinesOpen]       = useState(false);
@@ -76,7 +76,7 @@ export default function KonarkNavbar() {
       <nav className="bg-white border-b border-gray-100 shadow-sm px-4 sm:px-8 py-3.5 flex items-center justify-between relative">
 
         <Link to="/" className="flex items-center gap-2.5 select-none no-underline">
-          <img src={logo} alt="Konark Logo" className="w-9 h-9 object-contain" />
+          <img src={logo} alt="Blown Vision Machinary Logo" className="w-9 h-9 object-contain" />
           <span className="text-[#004D3D] text-xl font-bold tracking-tight">Blown Vision Machinary</span>
         </Link>
 

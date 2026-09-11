@@ -11,14 +11,12 @@ import {
   Compass,
   Cog,
   Activity,
-  Globe,
+  Headphones,
   CheckCircle,
 } from "lucide-react";
 
-// ─── Shared horizontal padding ────────────────────────────────────────────────
 const SECTION_PX = "px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20";
 
-// ─── Reusable scroll-reveal hook ──────────────────────────────────────────────
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -36,50 +34,37 @@ function useInView(threshold = 0.15) {
 export default function About() {
   const [visible, setVisible] = useState(false);
 
-  // Section refs
   const [visionRef, visionInView]     = useInView(0.1);
   const [processRef, processInView]   = useInView(0.1);
   const [block1Ref, block1InView]     = useInView(0.1);
   const [block2Ref, block2InView]     = useInView(0.1);
   const [whyRef, whyInView]           = useInView(0.1);
-  const [timelineRef, timelineInView] = useInView(0.1);
-  const [boardRef, boardInView]       = useInView(0.1);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(t);
   }, []);
 
-  const stats = [
-    { value: "27+", label: "YEARS EXPERIENCE" },
-    { value: "20+", label: "GLOBAL MARKETS" },
-    { value: "500+", label: "INSTALLATIONS" },
-  ];
-
   const steps = [
-    { icon: Compass,  title: "Conceptual Design",    description: "Custom engineering frameworks tailored to specific polymer dynamics." },
-    { icon: Cog,      title: "Precision Fabrication", description: "Advanced CNC machining and proprietary metallurgical hardening." },
-    { icon: Activity, title: "Rigorous Testing",      description: "Multi-stage stress analysis and operational simulation protocols." },
-    { icon: Globe,    title: "Global Deployment",     description: "Seamless logistics and onsite technical integration support." },
+    { icon: Compass,      title: "Conceptual Design",    description: "Custom engineering frameworks tailored to specific polymer dynamics." },
+    { icon: Cog,          title: "Precision Fabrication", description: "Advanced CNC machining and proprietary metallurgical hardening." },
+    { icon: Activity,     title: "Rigorous Testing",      description: "Extensive multi-material trial runs and rigorous operational testing to ensure flawless performance." },
+    { icon: Headphones,   title: "Dedicated After-Sales Support", description: "Prompt technical assistance, installation, and ongoing maintenance to guarantee maximum uptime." },
   ];
 
   const cards = [
-    { title: "Unmatched Reliability", description: "Our machines are engineered to run 24/7 for decades, with the lowest total cost of ownership in the industry." },
-    { title: "Innovation First",      description: "We invest 15% of annual revenue back into R&D, ensuring our clients always have the competitive edge." },
-    { title: "True Partnership",      description: "From initial floor-plan consulting to lifelong technical support, we are an extension of your team." },
-  ];
-
-  const milestones = [
-    { year: "1997", title: "Company Founded",        description: "Established with a vision for precision-led machinery manufacturing in Gujarat.",                                side: "left",  muted: false },
-    { year: "2005", title: "First Export Shipment",  description: "Transitioned into an international player with the first overseas installation in South East Asia.",             side: "right", muted: false },
-    { year: "2012", title: "R&D Center Expansion",   description: "Inaugurated a state-of-the-art testing facility dedicated to multilayer film innovation.",                       side: "left",  muted: false },
-    { year: "2024", title: "Next-Gen Green Extruders",description: "Launching our most energy-efficient series yet, focused on zero-waste production.",                             side: "right", muted: true  },
-  ];
-
-  const members = [
-    { name: "Rajesh Patel", role: "CEO", bio: "Visionary leader with 30 years of industrial engineering expertise.",              image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" },
-    { name: "Amit Sharma",  role: "CTO", bio: "Pioneer in multi-layer co-extrusion technology and IoT integration.",              image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" },
-    { name: "Priya Mehta",  role: "COO", bio: "Strategic operations specialist optimizing global supply chains.",                  image: "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=600&q=80" },
+    {
+      title: "Modular & Upgradable Design",
+      description: "Upgrade key components like die heads, air rings, or automatic winders as your customer demand grows — no need to buy an entirely new line.",
+    },
+    {
+      title: "In-House Precision & Control",
+      description: "Powered by our fully equipped 5,000 sq. ft. workshop featuring CNC VMCs and Lathes, our skilled team of 25+ members maintains strict end-to-end quality control on every component.",
+    },
+    {
+      title: "Unmatched Reliability & Partnership",
+      description: "Our machines are engineered for long-term performance, backed by continuous technical support to ensure your operation stays profitable and ahead of the competition.",
+    },
   ];
 
   return (
@@ -90,42 +75,24 @@ export default function About() {
         <section className={`w-full min-h-[calc(100vh-80px)] flex items-center ${SECTION_PX} py-10`}>
           <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-10">
 
-            {/* Left text — fade up on mount */}
             <div className={`w-full lg:w-[50%] flex flex-col transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <span className="w-fit text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] uppercase px-3 py-1.5 rounded-md bg-[#CEE8DD] text-[#526961] mb-6 sm:mb-8">
-                EST. 1997
+                ABOUT US
               </span>
               <div className="mb-6 sm:mb-8">
                 <h1 className="text-[34px] sm:text-[48px] md:text-[58px] lg:text-[64px] font-extrabold text-[#003429] leading-[1.05]">Precision</h1>
                 <h1 className="text-[34px] sm:text-[48px] md:text-[58px] lg:text-[64px] font-extrabold text-[#7EBDA8] leading-[1.05]">Tectonics</h1>
                 <h1 className="text-[34px] sm:text-[48px] md:text-[58px] lg:text-[64px] font-extrabold text-[#003429] leading-[1.05]">Engineered.</h1>
               </div>
-              <p className="text-[14px] sm:text-[15px] text-[#404945] leading-[1.8] max-w-[460px] mb-8 sm:mb-12">
-                With over 27 years of pioneering excellence, Konark Plastomech (Terra Form) stands as a titan in plastic extrusion technology, blending heavy-duty power with microscopic precision.
+              <p className="text-[14px] sm:text-[15px] text-[#404945] leading-[1.8] max-w-[500px] mb-8 sm:mb-12">
+                At BLOWN VISION MACHINERY, we represent the next generation of blown film extrusion technology. As an ambitious and fast-growing manufacturer, we bridge the gap between cutting-edge engineering and customer-focused innovation — delivering high-performance machines built without compromise. We don't just manufacture equipment; we provide reliable, future-ready production solutions that ensure consistent output and maximum long-term value for modern manufacturers.
               </p>
-              <div className="flex gap-8 sm:gap-12">
-                {stats.map((s, i) => (
-                  <div
-                    key={s.label}
-                    className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-                    style={{ transitionDelay: `${300 + i * 150}ms` }}
-                  >
-                    <p className="text-[26px] sm:text-[30px] lg:text-[32px] font-extrabold text-[#003429]">{s.value}</p>
-                    <p className="text-[10px] tracking-[0.12em] text-[#707975] font-semibold mt-1">{s.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className={`w-full lg:w-[50%] flex justify-center lg:justify-end transition-all duration-700 delay-200 ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
               <div className="relative w-full max-w-[520px]">
                 <div className="rounded-2xl overflow-hidden w-full">
                   <img src={heroo} alt="" className="w-full h-[240px] sm:h-[360px] md:h-[450px] lg:h-[520px] object-cover" />
-                </div>
-                <div className={`absolute bottom-[-20px] left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-2 md:right-3 lg:right-[-12px] w-[85%] sm:w-[60%] md:w-[50%] lg:w-[55%] bg-white rounded-2xl px-5 py-4 shadow-xl transition-all duration-700 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-                  <p className="text-[13px] sm:text-[13.5px] font-semibold text-[#404945] leading-[1.7]">
-                    "Innovation isn't just about speed; it's about the relentless pursuit of zero-defect manufacturing."
-                  </p>
                 </div>
               </div>
             </div>
@@ -142,8 +109,11 @@ export default function About() {
               <div className="mt-auto flex flex-col gap-3">
                 <p className="text-[#7EA89E] text-xs font-semibold tracking-[0.18em] uppercase select-none">The Vision</p>
                 <h2 className="text-white text-2xl sm:text-3xl font-semibold leading-tight">
-                  To be the global benchmark for high&#8209;performance plastic extrusion solutions.
+                  To be the primary benchmark for high-performance plastic extrusion solutions globally.
                 </h2>
+                <p className="text-white/70 text-sm leading-relaxed mt-2">
+                  Our goal is to pioneer smart, state-of-the-art machinery that sets new benchmarks in accuracy and productivity. We aim to reshape the flexible packaging landscape by continuously integrating cutting-edge technology into every system we build.
+                </p>
               </div>
             </div>
 
@@ -156,6 +126,9 @@ export default function About() {
                 <h2 className="text-[#0D1C1A] text-2xl sm:text-3xl font-semibold leading-tight">
                   To redefine industrial efficiency through uncompromising technical precision.
                 </h2>
+                <p className="text-[#555] text-sm leading-relaxed mt-3">
+                  We engineer robust, reliable, and energy-efficient blown film lines tailored to the evolving demands of modern manufacturing. Every component we craft is designed to deliver superior material consistency, maximum ROI, and long-lasting operational reliability.
+                </p>
               </div>
             </div>
           </div>
@@ -224,7 +197,7 @@ export default function About() {
               <div className={`space-y-5 md:space-y-6 transition-all duration-700 delay-150 ${block1InView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#003429] leading-tight">Advanced Manufacturing Facilities</h2>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  Our 50,000 sq. ft. facility is a marvel of precision tectonics, housing the latest in high-speed milling, specialized hardening furnaces, and automated assembly lines.
+                  Our fully equipped 5,000 sq. ft. workshop features CNC VMCs and Lathes, enabling us to maintain strict end-to-end quality control on every component.
                 </p>
                 <ul className="space-y-3">
                   {["ISO 9001:2015 Certified Operations", "Climate-controlled precision measuring rooms", "Dedicated R&D prototyping laboratory"].map((item, i) => (
@@ -249,7 +222,7 @@ export default function About() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "150+ Technical Staff",  desc: "Expert engineers across mechanical, electrical, and software disciplines." },
+                    { title: "25+ Skilled Members",  desc: "Expert engineers across mechanical, electrical, and software disciplines." },
                     { title: "Zero-Tolerance QA",     desc: "Every component undergoes ultrasonic and thermal imaging tests." },
                   ].map((card, i) => (
                     <div key={i} className="bg-[#EDEEEF] rounded-xl p-5 space-y-2">
@@ -284,102 +257,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section ref={timelineRef} className={`py-16 ${SECTION_PX} font-sans`}>
-          <h2 className={`text-center text-[28px] sm:text-[36px] font-bold text-[#003429] tracking-tight mb-14 sm:mb-20 transition-all duration-700 ${timelineInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-            Evolutionary Milestones
-          </h2>
-
-          <div className="hidden sm:block relative w-full max-w-4xl mx-auto">
-            <div className="absolute top-0 bottom-0 w-px bg-[#c8d4cc] left-1/2 -translate-x-1/2" />
-            <div className="flex flex-col gap-[72px]">
-              {milestones.map((m, i) => (
-                <div key={i} className="relative flex items-start min-h-[100px]">
-                  <div className="w-1/2 flex justify-end pr-10">
-                    {m.side === "left" && (
-                      <div
-                        className={`max-w-[280px] text-right transition-all duration-700 ${timelineInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-                        style={{ transitionDelay: `${i * 150}ms` }}
-                      >
-                        <p className={`text-[28px] font-bold leading-none mb-[6px] ${m.muted ? "text-[#4C635B]" : "text-[#003429]"}`}>{m.year}</p>
-                        <p className="text-[13.5px] text-[#404945] mb-[3px] font-normal">{m.title}</p>
-                        <p className="text-[13.5px] text-[#191C1D] leading-[1.68]">{m.description}</p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div
-                    className={`absolute z-10 left-1/2 -translate-x-1/2 top-[7px] transition-all duration-500 ${timelineInView ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}
-                    style={{ transitionDelay: `${i * 150 + 80}ms` }}
-                  >
-                    <div className="w-[18px] h-[18px] rounded-full bg-[#004D3D]" />
-                  </div>
-
-                  <div className="w-1/2 flex justify-start pl-10">
-                    {m.side === "right" && (
-                      <div
-                        className={`max-w-[280px] text-left transition-all duration-700 ${timelineInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-                        style={{ transitionDelay: `${i * 150}ms` }}
-                      >
-                        <p className={`text-[28px] font-bold leading-none mb-[6px] ${m.muted ? "text-[#4C635B]" : "text-[#003429]"}`}>{m.year}</p>
-                        <p className="text-[13.5px] text-[#404945] mb-[3px] font-normal">{m.title}</p>
-                        <p className="text-[13.5px] text-[#191C1D] leading-[1.68]">{m.description}</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="sm:hidden relative w-full">
-            <div className="absolute top-0 bottom-0 w-px bg-[#c8d4cc] left-[19px]" />
-            <div className="flex flex-col gap-12">
-              {milestones.map((m, i) => (
-                <div
-                  key={i}
-                  className={`relative flex items-start pl-10 transition-all duration-700 ${timelineInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"}`}
-                  style={{ transitionDelay: `${i * 120}ms` }}
-                >
-                  <div className="absolute z-10 left-[10px] top-[7px]">
-                    <div className="w-[18px] h-[18px] rounded-full bg-[#004D3D]" />
-                  </div>
-                  <div className="text-left">
-                    <p className={`text-[22px] font-bold leading-none mb-[6px] ${m.muted ? "text-[#4C635B]" : "text-[#003429]"}`}>{m.year}</p>
-                    <p className="text-[13px] text-[#404945] mb-[8px] font-normal">{m.title}</p>
-                    <p className="text-[13px] text-[#191C1D] leading-[1.65]">{m.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section ref={boardRef} className={`py-16 ${SECTION_PX} font-sans`}>
-          <div className={`transition-all duration-700 ${boardInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-            <h2 className="text-[28px] sm:text-[32px] font-bold text-[#003429] mb-2">Board of Directors</h2>
-            <p className="text-[15px] text-[#4a5e55] mb-10 sm:mb-12">The minds steering the future of plastic extrusion.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {members.map((m, i) => (
-              <div
-                key={i}
-                className={`bg-white rounded-2xl overflow-hidden shadow-sm border border-[#e4eae6] transition-all duration-700 hover:shadow-md hover:-translate-y-1 ${boardInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-                style={{ transitionDelay: `${i * 120}ms` }}
-              >
-                <div className="w-full h-[240px] sm:h-[280px] overflow-hidden">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
-                </div>
-                <div className="px-5 py-5">
-                  <p className="text-[19px] font-bold text-[#003429] mb-[2px]">{m.name}</p>
-                  <p className="text-[13.5px] text-[#4a5e55] mb-4">{m.role}</p>
-                  <p className="text-[13.5px] text-[#2e3b36] leading-[1.7]">{m.bio}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 

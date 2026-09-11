@@ -2,6 +2,8 @@ import './App.css'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Machines from './pages/Machines'
+import NotFound from './pages/NotFound'
 import Monolayer from './pages/machines/MonolayerMachine'
 import AbaThreeLayer from './pages/machines/AbaThreeLayerMachine'
 import AbcThreeLayer from './pages/machines/AbcThreeLayerMachine'
@@ -18,9 +20,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/machines" element={<Machines />} />
         <Route path="/machines/monolayer" element={<Monolayer />} />
         <Route path="/machines/aba" element={<AbaThreeLayer />} />
         <Route path="/machines/abc" element={<AbcThreeLayer />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
